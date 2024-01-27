@@ -2,7 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    // element-plus volar 自动提示
+    "types": ["element-plus/global"]
   },
   "exclude": ["node_modules", "dist"]
 }
