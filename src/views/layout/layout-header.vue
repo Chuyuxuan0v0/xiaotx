@@ -10,21 +10,7 @@
         <li class="home">
           <RouterLink to="/">首页</RouterLink>
         </li>
-        <li class="home">
-          <RouterLink to="/">首页2</RouterLink>
-        </li>
-        <li class="home">
-          <RouterLink to="/">首页323132131231</RouterLink>
-        </li>
-        <li class="home">
-          <RouterLink to="/">首页4432423423</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">居312312312家</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">美食</RouterLink>
-        </li>
+  
         <li>
           <RouterLink to="/">服饰</RouterLink>
         </li>
