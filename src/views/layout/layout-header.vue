@@ -10,6 +10,15 @@
         <li class="home">
           <RouterLink to="/">首页</RouterLink>
         </li>
+        <li class="home">
+          <RouterLink to="/">首页2</RouterLink>
+        </li>
+        <li class="home">
+          <RouterLink to="/">首页3</RouterLink>
+        </li>
+        <li class="home">
+          <RouterLink to="/">首页4</RouterLink>
+        </li>
         <li>
           <RouterLink to="/">居家</RouterLink>
         </li>
