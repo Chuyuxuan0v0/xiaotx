@@ -1,5 +1,17 @@
+<script setup>
+import Header from './layout-header.vue'
+import HeaderFixed from './layout-heder-fixed.vue'
+import Footer from './layout-footer.vue'
+import Nav from './layout-nav.vue'
+
+
+
+</script>
 <template>
-    <div>
-         <h2>I am layout</h2>
-    </div>
+  <div >
+    <Header></Header>
+    <HeaderFixed></HeaderFixed>
+    <Nav></Nav>
+    <Footer></Footer>
+  </div>
 </template>
