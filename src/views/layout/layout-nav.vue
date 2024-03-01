@@ -38,11 +38,13 @@
     justify-content: flex-end;
     align-items: center;
     li {
+      list-style-type: none; /* 去掉列表项前面的点 */
       a {
         padding: 0 15px;
         color: #cdcdcd;
         line-height: 1;
         display: inline-block;
+        text-decoration: none;
 
         i {
           font-size: 14px;

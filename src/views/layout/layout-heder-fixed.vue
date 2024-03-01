@@ -1,57 +1,33 @@
 <script setup>
+import { useCategoryStore } from '@/stores/category'
+
 import { useScroll } from '@vueuse/core'
+
+// 拿到之后直接使用了
+const categoryStore = useCategoryStore()
+
 const { y } = useScroll(window)
 </script>
 
 <template>
-  <div class="app-header-sticky" :class="{show: y> 78}" >
+  <div class="app-header-sticky" :class="{ show: y > 78 }">
     <div class="container">
-        <RouterLink class="logo" to="/" />
-      
-      <!-- 导航区域 -->
-      <ul class="app-header-nav ">
-        <li class="home">
-          <RouterLink to="/">首页</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">居家</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">美食</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">服饰</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">母婴</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">个护</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">严选</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">数码</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">运动</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/">杂项</RouterLink>
+      <h1 class="logo"></h1>
+      <ul class="app-header-nav">
+        <li :key="item.id" v-for="item in categoryStore.categoryList">
+          <RouterLink to="/">{{ item.name }}</RouterLink>
         </li>
       </ul>
-
-      <div class="right">
-        <RouterLink to="/">品牌</RouterLink>
-        <RouterLink to="/">专题</RouterLink>
+      <div class="search">
+        <i class="iconfont icon-search"></i>
+        <input type="text" placeholder="搜一搜" />
       </div>
+      <!-- 头部购物车 -->
     </div>
   </div>
 </template>
 
-
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .app-header-sticky {
   width: 100%;
   height: 80px;
@@ -112,6 +88,7 @@ const { y } = useScroll(window)
   padding-left: 40px;
   position: relative;
   z-index: 998;
+  list-style-type: none;
 
   li {
     margin-right: 40px;
@@ -127,7 +104,6 @@ const { y } = useScroll(window)
 
       &:hover {
         color: $xtxColor;
-        border-bottom: 1px solid $xtxColor;
       }
     }
 

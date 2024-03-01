@@ -1,16 +1,12 @@
 <script setup>
-
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const fileRef = ref()
 const file = ref()
 
-const handleUpload = (e) =>{
-    file.value = fileRef.value.files[0]
-    
+const handleUpload = (e) => {
+  file.value = fileRef.value.files[0]
 }
-
-
 </script>
 
 <template>
