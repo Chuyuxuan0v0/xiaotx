@@ -10,4 +10,10 @@ const getBannerAPI = () => {
     url: '/home/banner'
   })
 }
-export { getCategoryAPI, getBannerAPI }
+
+const getNewAPI = () => {
+  return http({
+    url: '/home/new'
+  })
+}
+export { getCategoryAPI, getBannerAPI, getNewAPI }

@@ -8,7 +8,6 @@ const bannerList = ref([])
 onMounted(async () => {
   const res = await getBannerAPI()
   bannerList.value = res.result
-  console.log(res.result)
 })
 </script>
 
@@ -16,7 +15,8 @@ onMounted(async () => {
   <div class="home-banner">
     <el-carousel height="500px">
       <el-carousel-item v-for="item in bannerList" :key="item.id">
-        <img :src="item.imgUrl" alt="" />
+        <!-- 自定义指令，需要自己加一个 v- -->
+        <img v-img-lazy="item.imgUrl"  alt="" />
       </el-carousel-item>
     </el-carousel>
   </div>
