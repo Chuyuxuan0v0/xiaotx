@@ -5,4 +5,9 @@ const getCategoryAPI = () => {
   })
 }
 
-export { getCategoryAPI }
+const getBannerAPI = () => {
+  return http({
+    url: '/home/banner'
+  })
+}
+export { getCategoryAPI, getBannerAPI }

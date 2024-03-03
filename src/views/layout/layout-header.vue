@@ -31,6 +31,7 @@ const categoryStore = useCategoryStore()
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
 
   .logo {
@@ -77,6 +78,10 @@ const categoryStore = useCategoryStore()
   .search {
     width: 170px;
     height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     position: relative;
     border-bottom: 1px solid #e7e7e7;
     line-height: 32px;
@@ -90,6 +95,8 @@ const categoryStore = useCategoryStore()
       width: 140px;
       padding-left: 5px;
       color: #666;
+      border: 0;
+      outline: 0;
     }
   }
 

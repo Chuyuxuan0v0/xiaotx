@@ -20,7 +20,7 @@ const { y } = useScroll(window)
       </ul>
       <div class="search">
         <i class="iconfont icon-search"></i>
-        <input type="text" placeholder="搜一搜" />
+        <input class="myinput" type="text" placeholder="搜一搜" />
       </div>
       <!-- 头部购物车 -->
     </div>
@@ -53,6 +53,7 @@ const { y } = useScroll(window)
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
 
   .logo {
@@ -111,6 +112,30 @@ const { y } = useScroll(window)
       color: $xtxColor;
       border-bottom: 1px solid $xtxColor;
     }
+  }
+}
+.search {
+  width: 170px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  border-bottom: 1px solid #e7e7e7;
+  line-height: 32px;
+
+  .icon-search {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  input {
+    width: 147px;
+    padding-left: 5px;
+    color: #666;
+    border: 0;
+    outline: 0;
   }
 }
 </style>
